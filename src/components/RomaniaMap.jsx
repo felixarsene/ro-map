@@ -1,7 +1,10 @@
 import { useState } from "react";
-import RegionsSVG from "../assets/Romania_historic_regions.svg?react";
-import CountiesSVG from "../assets/Romania_counties.svg?react";
+import RegionsSVG from "../assets/Romania_historic_regions1.svg?react";
+import CountiesSVG from "../assets/Romania_counties1.svg?react";
 import "./../RomaniaMap.css";
+import regionInfo from "../data/regions.js";
+import Tooltip from "./Tooltip.jsx";
+import CountiesMap from "./CountiesMap.jsx";
 
 export default function RomaniaMap() {
     const [hoveredRegion, setHoveredRegion] = useState(null);
@@ -16,19 +19,23 @@ export default function RomaniaMap() {
         });
     };
 
-    const handleMouseLeave = () => {
+    const handleRegionClick = (regionId) => {
+        setHoveredRegion(null);
         setTooltip({ visible: false });
+        setSelectedRegion(regionId); // this switches to county view
     };
 
-    const handleRegionClick = (regionId) => {
-        setSelectedRegion(regionId);
-    };
 
     return (
         <div style={{ position: "relative" }}>
             {!selectedRegion ? (
                 <RegionsSVG
-                    className="romania-map"
+                    className={`romania-map ${hoveredRegion ? "hovering" : ""}`}
+                    onClick={(e) => {
+                        if (e.target.tagName === "path" && e.target.id) {
+                            handleRegionClick(e.target.id);
+                        }
+                    }}
                     onMouseMove={handleMouseMove}
                     onMouseOver={(e) => {
                         if (e.target.tagName === "path" && e.target.id) {
@@ -42,26 +49,18 @@ export default function RomaniaMap() {
                     }}
                 />
             ) : (
-                <CountiesSVG className="county-map" />
+                <CountiesMap 
+                    region={selectedRegion}
+                    onBack={() => setSelectedRegion(null)} />
             )}
 
             {/* Tooltip */}
             {tooltip.visible && hoveredRegion && (
-                <div
-                    style={{
-                        position: "fixed",
-                        top: tooltip.y,
-                        left: tooltip.x,
-                        padding: "6px 10px",
-                        background: "#222",
-                        color: "white",
-                        borderRadius: "6px",
-                        pointerEvents: "none",
-                        fontSize: "12px",
-                    }}
-                >
-                    {hoveredRegion}
-                </div>
+                <Tooltip x={tooltip.x} y={tooltip.y}>
+                    <strong>{regionInfo[hoveredRegion].name}</strong><br />
+                    {regionInfo[hoveredRegion].description}
+                </Tooltip>
+
             )}
         </div>
     );

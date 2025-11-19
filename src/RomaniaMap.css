@@ -1,4 +1,45 @@
-.romania-map path {
+.romania-map .region {
     pointer-events: all;
     cursor: pointer;
+    transition: fill 0.2s ease, filter 0.2s ease;
+}
+
+.romania-map.hovering .region {
+    opacity: 0.6;
+}
+
+.romania-map.hovering .region:hover {
+        opacity: 1 !important;
+}
+
+
+.romania-map .region:hover {
+    filter: brightness(1.2) drop-shadow(0 0 8px rgba(255,255,255,0.6));
+    stroke: #fff;
+    stroke-width: 3px;
+    opacity: 1;
+}
+
+.county-map path,
+.county-map circle {
+    pointer-events: all;
+    cursor: pointer;
+    transition: filter 0.2s ease, opacity 0.2s ease;
+}
+
+.county-map:hover path:not(:hover),
+.county-map:hover circle:not(:hover) {
+    opacity: 0.5;
+}
+
+.county-map path:hover,
+.county-map circle:hover {
+    filter: brightness(1.2) drop-shadow(0 0 8px rgba(255,255,255,0.6));
+    opacity: 1 !important;
+}
+
+.county-zoom {
+    transform: scale(1.8);
+    transform-origin: center;
+    transition: transform 0.5s ease;
 }
