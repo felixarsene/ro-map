@@ -1,4 +1,4 @@
-# 🇷🇴 RoMap – Romanian Cultural Heritage Learning Platform  
+# 💙💛❤️ RoMap – Romanian Cultural Heritage Learning Platform  
 Interactive Map • Cultural Education • Gamified Learning
 
 ## 🧠 Research Context  
