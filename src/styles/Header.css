@@ -1,0 +1,72 @@
+.header {
+  width: 100%;
+  background: white;
+  padding: 8px 30px;   
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+  border-bottom: 3px solid #002B7F;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 70px;        
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header-logo {
+  height: 52px;
+  width: 52px;
+  object-fit: contain;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.header-title {
+  font-size: 1.4rem;  
+  margin: 0;
+  line-height: 1;
+}
+
+.header-tagline {
+  font-size: 0.75rem;  
+  margin: 0;
+  color: #666;
+}
+
+
+.header-nav {
+  display: flex;
+  gap: 18px;  /* reduced */
+  color: #002B7F;
+}
+
+.nav-item {
+  font-size: 0.95rem;   /* slightly smaller font */
+  padding-bottom: 2px;  /* smaller underline distance */
+}
+
+
+.nav-item:hover {
+  color: #002B7F;
+  border-bottom: 2px solid #FDB813; 
+}
+
+.nav-more {
+  color: #B80000; /* Romanian red accent */
+}
+
+.lang-select {
+  padding: 4px 6px;
+  font-size: 0.85rem;
+  border-radius: 6px;
+}

@@ -30,7 +30,6 @@ const AuthPage = () => {
           <select className="lang-select">
             <option value="en">EN</option>
             <option value="ro">RO</option>
-            <option value="fr">FR</option>
           </select>
 
           <button
