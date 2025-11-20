@@ -1,16 +1,103 @@
-# React + Vite
+# 💙💛❤️ RoMap – Romanian Cultural Heritage Learning Platform  
+Interactive Map • Cultural Education • Gamified Learning
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🧠 Research Context  
+**Research Question:**  
+*Can a digital, interactive application help Romanian communities or students increase their connection to their cultural heritage?*
 
-Currently, two official plugins are available:
+RoMap is designed as a learning tool and cultural exploration platform.  
+It aims to address cultural disconnect by providing visually engaging, modern, and easy-to-use interfaces that teach users about Romania’s regions, traditions, and history.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The project blends **education**, **technology** and **cultural preservation**.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📖 Project Overview  
+**RoMap** is a web application that allows users to explore Romania’s cultural regions through an interactive map and a structured learning experience.  
+The app presents each region with its own cultural identity, traditional elements, historical context, and modern fun facts.
 
-## Expanding the ESLint configuration
+### Core Goals  
+- Strengthen cultural identity and awareness  
+- Provide an accessible learning tool for students and diaspora  
+- Use gamification to create motivation and engagement  
+- Present Romanian culture through a modern, digital lens  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Included Features  
+- 🗺️ **Interactive Map:** Regions + București shown separately  
+- 🏺 **Cultural Profiles:** Food, music, costumes, slang, religion, influences  
+- ⭐ **Fun Facts Section:** Landmarks, history, unusual facts, media references  
+- 🎮 **Gamified Quizzes:** Region-based quizzes with progressive difficulty  
+- 📊 **User Progress Tracking** (planned)  
+- 🔐 **Login/Signup System** for personalized learning  
+- 🎨 UI/UX designed around cultural authenticity and readability  
+
+---
+
+## 🧭 System Architecture  
+RoMap follows a modular and scalable architecture.
+
+### **Frontend Architecture (Implemented)**
+- **React.js** component-based structure  
+- **SVG-based Map Engine** for region detection  
+- Reusable UI components for pages, cards, quiz questions  
+- State-based navigation and dynamic region rendering  
+
+### **Backend Architecture (Planned)**
+- **Node.js / Express** server  
+- **MongoDB** for user accounts, quiz data, progress tracking  
+- REST API endpoints for:
+  - User authentication  
+  - Region data retrieval  
+  - Quiz storage and retrieval  
+  - Leaderboard and statistics  
+
+---
+
+## 🎨 UI/UX Design Principles  
+- Clear visual hierarchy  
+- High contrast and readability  
+- Smooth navigation between map → region → quiz  
+- Color palette inspired by Romanian flag tones  
+- Soft whites and neutrals to balance strong cultural colors  
+- Mobile-friendly layout (in progress)  
+
+---
+
+## ⚙️ How to Run the Project  
+
+Follow these steps to install and run **RoMap** locally for development or testing.  
+The project uses **React**, **npm**, and **Vite** as the development server.
+
+---
+
+### 1. Clone the Repository  
+Download the project to your machine using Git:
+
+```bash
+git clone https://github.com/<your-username>/ro-map.git
+cd ro-map
+```
+### 2. Install Dependencies
+
+Install all required packages (React, Vite, Tailwind, etc.):
+
+```bash
+npm install
+```
+
+### 3. Start the Development Server
+
+Run the app locally with Vite:
+
+```bash
+npm run dev
+```
+
+After a few seconds, Vite will display something like:
+```bash
+Local:   http://localhost:5173/
+Network: http://192.168.x.x:5173/
+```
+
+Open the Local URL in your browser to view the application.
+
