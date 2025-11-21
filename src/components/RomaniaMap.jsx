@@ -1,7 +1,7 @@
 import { useState } from "react";
 import RegionsSVG from "../assets/Romania_historic_regions1.svg?react";
 import CountiesSVG from "../assets/Romania_counties1.svg?react";
-import "./../RomaniaMap.css";
+import "../styles/RomaniaMap.css";
 import regionInfo from "../data/regions.js";
 import Tooltip from "./Tooltip.jsx";
 import CountiesMap from "./CountiesMap.jsx";
