@@ -1,0 +1,48 @@
+﻿// List of Romanian counties with name, a short description, and region.
+// You can expand the descriptions and regions as needed for your app.
+
+const counties = {
+  ROAB: { name: "Alba", description: "Located in Transylvania, known for Alba Iulia and its citadel.", region: "Transylvania" },
+  ROAR: { name: "Arad", description: "Western Romania, bordering Hungary, with a rich multicultural history.", region: "Transylvania" },
+  ROAG: { name: "Argeș", description: "Home to Curtea de Argeș Monastery and part of the Carpathians.", region: "Muntenia" },
+  ROBC: { name: "Bacău", description: "Eastern Romania, known for its cultural heritage and natural beauty.", region: "Moldova" },
+  ROBH: { name: "Bihor", description: "Features Oradea city and the Apuseni Mountains.", region: "Transylvania" },
+  ROBN: { name: "Bistrița-Năsăud", description: "Transylvanian county with medieval towns and scenic landscapes.", region: "Transylvania" },
+  ROBR: { name: "Brăila", description: "Danube port city, important for trade and agriculture.", region: "Moldova" },
+  ROBT: { name: "Botoșani", description: "Birthplace of many Romanian poets and artists.", region: "Moldova" },
+  ROBV: { name: "Brașov", description: "Tourist hotspot, home to Bran Castle and the Carpathians.", region: "Transylvania" },
+  ROB:  { name: "București", description: "Romania's capital, the largest city and cultural center.", region: "București" },
+  ROCS: { name: "Caraș-Severin", description: "Mountainous region, part of Banat, with beautiful national parks.", region: "Banat" },
+  ROCL: { name: "Călărași", description: "Located on the Danube, known for agriculture and fishing.", region: "Dobrogea" },
+  ROCJ: { name: "Cluj", description: "Major academic and tech hub, home to Cluj-Napoca.", region: "Transylvania" },
+  ROCT: { name: "Constanța", description: "Black Sea coast, Romania's largest port and seaside resorts.", region: "Dobrogea" },
+  ROCV: { name: "Covasna", description: "Known for mineral springs and Szekler culture.", region: "Transylvania" },
+  RODB: { name: "Dâmbovița", description: "Historic region, home to Târgoviște, former capital of Wallachia.", region: "Muntenia" },
+  RODJ: { name: "Dolj", description: "Southwest, with Craiova as a major city.", region: "Oltenia" },
+  ROGL: { name: "Galați", description: "Danube port, important for shipbuilding and industry.", region: "Moldova" },
+  ROGR: { name: "Giurgiu", description: "Southern border county, with a major Danube crossing.", region: "Muntenia" },
+  ROGJ: { name: "Gorj", description: "Home to sculptor Constantin Brâncuși and the Jiu Valley.", region: "Oltenia" },
+  ROHR: { name: "Harghita", description: "Heart of Szeklerland, famous for its natural beauty.", region: "Transylvania" },
+  ROHD: { name: "Hunedoara", description: "Corvin Castle and Dacian fortresses are key attractions.", region: "Transylvania" },
+  ROIL: { name: "Ialomița", description: "Agricultural county in the Bărăgan Plain.", region: "Muntenia" },
+  ROIS: { name: "Iași", description: "Historic Moldavian city, major cultural and academic center.", region: "Moldova" },
+  ROIF: { name: "Ilfov", description: "Surrounds Bucharest, rapidly developing suburban area.", region: "București" },
+  ROMM: { name: "Maramureș", description: "Known for wooden churches and traditional villages.", region: "Transylvania" },
+  ROMH: { name: "Mehedinți", description: "Danube gorges and Iron Gates natural park.", region: "Oltenia" },
+  ROMS: { name: "Mureș", description: "Diverse region with Târgu Mureș as its main city.", region: "Transylvania" },
+  RONT: { name: "Neamț", description: "Home to medieval fortresses and Ceahlău Massif.", region: "Moldova" },
+  ROOT: { name: "Olt", description: "Agricultural region in southern Romania.", region: "Oltenia" },
+  ROPH: { name: "Prahova", description: "Famous for vineyards and the Prahova Valley resorts.", region: "Muntenia" },
+  ROSM: { name: "Satu Mare", description: "Multicultural border county with Hungary and Ukraine.", region: "Transylvania" },
+  ROSJ: { name: "Sălaj", description: "Rolling hills and ancient Dacian sites.", region: "Transylvania" },
+  ROSB: { name: "Sibiu", description: "Medieval city, European Capital of Culture 2007.", region: "Transylvania" },
+  ROSV: { name: "Suceava", description: "Painted monasteries and Bukovina traditions.", region: "Moldova" },
+  ROTR: { name: "Teleorman", description: "Southern county, mainly agricultural.", region: "Muntenia" },
+  ROTM: { name: "Timiș", description: "Westernmost county, home to Timișoara.", region: "Banat" },
+  ROTL: { name: "Tulcea", description: "Gateway to the Danube Delta.", region: "Dobrogea" },
+  ROVS: { name: "Vaslui", description: "Historic Moldavian region.", region: "Moldova" },
+  ROVL: { name: "Vâlcea", description: "Spa resorts and the Olt Valley.", region: "Oltenia" },
+  ROVN: { name: "Vrancea", description: "Wine region, known for seismic activity.", region: "Moldova" }
+};
+
+export default counties;
