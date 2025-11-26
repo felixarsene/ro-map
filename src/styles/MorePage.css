@@ -103,6 +103,9 @@
   font-size: 1.7rem;
   color: #002b7f;
   margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .more-subtitle {

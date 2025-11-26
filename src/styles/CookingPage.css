@@ -1,0 +1,192 @@
+/* --- Page Layout --- */
+
+.cooking-page-layout {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- Hero Section --- */
+.cooking-hero {
+  text-align: center;
+  padding: 40px 20px;
+  background: #fdfaf2; /* Light, warm background */
+  border-radius: 12px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.cooking-hero-title {
+  font-size: 2.5em;
+  color: #002b7f; 
+  margin-bottom: 10px;
+}
+
+.cooking-hero-title span {
+  display: inline-block;
+  width: 30px; /* Space for the flag */
+}
+
+.flag-icon {
+  width: 30px;
+  height: 20px;
+  margin-left: 10px;
+}
+
+.cooking-hero-subtitle {
+  font-size: 1.1em;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+
+
+/* --- Recipe Card Section Header (Inspired by MorePage) --- */
+
+.recipe-card-section {
+    margin-bottom: 60px;
+}
+
+.recipe-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 0 10px;
+}
+
+.recipe-title {
+    font-size: 1.8em;
+    color: #333;
+    margin: 0 0 5px 0;
+}
+
+.recipe-subtitle {
+    color: #777;
+    margin: 0;
+}
+
+.tag-group .tag {
+    background-color: #f0f0f0;
+    color: #444;
+    padding: 5px 12px;
+    border-radius: 20px;
+    margin-left: 8px;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+
+
+/* --- Recipe Grid Layout --- */
+
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+
+
+
+/* --- Recipe Card Styling (Inspired by Music Frame) --- */
+
+.recipe-item-card {
+  display: flex;
+  flex-direction: column;
+  border: 10px solid #f9f9f9; /* Outer frame border */
+  border-radius: 6px;
+  background-color: white;
+  text-decoration: none;
+  color: #333;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  height: 100%;
+}
+
+.recipe-item-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-image-container {
+  /* Creates a square image aspect ratio, like a framed picture */
+  width: 100%;
+  padding-top: 100%;
+  position: relative;
+}
+
+.recipe-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 1px solid #eee; /* Inner image border */
+}
+
+.card-details {
+  padding: 15px 20px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.dish-name {
+  font-size: 1.6em;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 5px;
+  color: #000000; /* Deep red for dish name */
+}
+
+.ingredient-list-preview {
+  font-size: 0.9em;
+  color: #666;
+  padding-top: 10px;
+  margin-bottom: 15px;
+  border-top: 1px solid #eee; /* Horizontal divider like a progress bar */
+
+}
+
+.ingredient-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px 10px;
+}
+
+.ingredient-list li {
+    background-color: #f7f7f7;
+    padding: 2px 8px;
+    border-radius: 3px
+    font-size: 1.1em;
+}
+
+.card-controls {
+  text-align: center;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+  margin-top: auto;
+}
+
+.view-recipe-btn {
+  background-color: #950303;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  text-align: center;
+  font-size: 1.1em;
+  border-radius: 50px; /* Pill shape for the button */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.view-recipe-btn:hover {
+  background-color: #cc1717;
+}
