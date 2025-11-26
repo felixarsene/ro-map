@@ -1,10 +1,30 @@
-.county-map path.active-county {
+.county-map path,
+.county-map circle {
+    opacity: 0.25;
+    filter: grayscale(0.7) brightness(0.95);
+    pointer-events: none;
+    transition: filter 0.2s, opacity 0.2s, stroke 0.2s;
+}
+
+.county-map path.active-county,
+.county-map circle.active-county {
     opacity: 1;
-    pointer-events: all !important; /* <-- REQUIRED */
-    filter: brightness(1.2) drop-shadow(0 0 8px #ffd70088);
+    filter: brightness(1.15) drop-shadow(0 0 8px #ffd70088);
     stroke: #002b7f;
     stroke-width: 2.5;
     cursor: pointer;
+    pointer-events: all !important;
+    transition: filter 0.2s, opacity 0.2s, stroke 0.2s;
+    z-index: 2;
+}
+
+.county-map path.active-county:hover,
+.county-map circle.active-county:hover {
+    filter: brightness(1.35) drop-shadow(0 0 16px #ffd700cc);
+    stroke: #ffd700;
+    stroke-width: 3.5;
+    opacity: 1 !important;
+    z-index: 3;
 }
 
 .romania-map {
@@ -67,24 +87,6 @@
     opacity: 1;
 }
 
-.county-map path,
-.county-map circle {
-    pointer-events: all;
-    cursor: pointer;
-    transition: filter 0.2s ease, opacity 0.2s ease;
-}
-
-.county-map:hover path:not(:hover),
-.county-map:hover circle:not(:hover) {
-    opacity: 0.5;
-}
-
-.county-map path:hover,
-.county-map circle:hover {
-    filter: brightness(1.2) drop-shadow(0 0 8px rgba(255,255,255,0.6));
-    opacity: 1 !important;
-}
-
 .county-zoom {
     transform: scale(1.8);
     transform-origin: center;
@@ -101,7 +103,7 @@
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
   padding: 28px 30px 32px;
   overflow: hidden; /* <--- Add this */
-  height: 600px;     /* <--- Add a fixed height or use min-height */
+  height: 400px;     /* <--- Add a fixed height or use min-height */
   display: flex;
   flex-direction: column;
 }
@@ -159,11 +161,6 @@
   filter: drop-shadow(0 4px 18px rgba(0,43,127,0.08));
 }
 
-.county-map path {
-  opacity: 0.3;
-  pointer-events: none;
-  transition: filter 0.2s, opacity 0.2s;
-}
 .county-map path.active-county {
   opacity: 1;
   pointer-events: all;
@@ -198,5 +195,5 @@
 .romania-map-container {
   position: relative;
   width: 100%;
-  min-height: 600px; /* or whatever fits your map */
+  min-height: 500px; /* or whatever fits your map */
 }

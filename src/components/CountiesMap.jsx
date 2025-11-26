@@ -12,7 +12,7 @@ export default function CountiesMap({ region, onBack }) {
     () =>
       Object.entries(counties)
         .filter(([code, data]) => data.region.toLowerCase() === region.toLowerCase())
-        .map(([code]) => "RO" + code),
+        .map(([code]) => code), // <-- FIXED: use code directly
     [region]
   );
 
@@ -22,21 +22,24 @@ export default function CountiesMap({ region, onBack }) {
     const svg = wrapper.querySelector("svg");
     if (!svg) return;
 
+    // Add the county-map class so CSS applies!
+    svg.classList.add("county-map");
+
     // Highlight and interactivity
-    svg.querySelectorAll("path").forEach((path) => {
-      path.classList.remove("active-county");
-      path.onmouseenter = null;
-      path.onmouseleave = null;
-      path.onmousemove = null;
-      path.style.cursor = "default";
+    svg.querySelectorAll("path, circle").forEach((el) => {
+      el.classList.remove("active-county");
+      el.onmouseenter = null;
+      el.onmouseleave = null;
+      el.onmousemove = null;
+      el.style.cursor = "default";
     });
 
     regionCountyIds.forEach((id) => {
-      const path = svg.getElementById(id);
-      if (path) {
-        path.classList.add("active-county");
-        path.style.cursor = "pointer";
-        path.onmouseenter = (e) => {
+      const el = svg.getElementById(id);
+      if (el) {
+        el.classList.add("active-county");
+        el.style.cursor = "pointer";
+        el.onmouseenter = (e) => {
           setHoveredCounty(id);
           setTooltip({
             visible: true,
@@ -44,10 +47,10 @@ export default function CountiesMap({ region, onBack }) {
             y: e.clientY,
           });
         };
-        path.onmousemove = (e) => {
+        el.onmousemove = (e) => {
           setTooltip((t) => ({ ...t, x: e.clientX, y: e.clientY }));
         };
-        path.onmouseleave = () => {
+        el.onmouseleave = () => {
           setHoveredCounty(null);
           setTooltip({ visible: false, x: 0, y: 0 });
         };
@@ -55,7 +58,6 @@ export default function CountiesMap({ region, onBack }) {
     });
 
     // --- ZOOM LOGIC ---
-    // Find bounding box of all region counties
     let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
     regionCountyIds.forEach((id) => {
       const path = svg.getElementById(id);
@@ -68,8 +70,7 @@ export default function CountiesMap({ region, onBack }) {
       }
     });
     if (minX < Infinity && minY < Infinity) {
-      // Add some padding
-      const pad = 20;
+      const pad = 60;
       svg.setAttribute(
         "viewBox",
         `${minX - pad} ${minY - pad} ${maxX - minX + 2 * pad} ${maxY - minY + 2 * pad}`
@@ -104,9 +105,9 @@ export default function CountiesMap({ region, onBack }) {
             pointerEvents: "none",
           }}
         >
-          <strong>{counties[hoveredCounty.replace("RO", "")]?.name}</strong>
+          <strong>{counties[hoveredCounty]?.name}</strong>
           <br />
-          {counties[hoveredCounty.replace("RO", "")]?.description}
+          {counties[hoveredCounty]?.description}
         </div>
       )}
     </div>

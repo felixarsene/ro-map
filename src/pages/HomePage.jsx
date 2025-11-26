@@ -15,7 +15,7 @@ const HomePage = () => {
 
         <div className="more-content">
           <section className="more-hero">
-            <p className="hero-pill">Explore • Learn • Zoom In</p>
+            <p className="hero-pill">Explore â€¢ Learn â€¢ Zoom In</p>
             <h1 className="more-hero-title">
               Discover Romania, region by region{" "}
               <img
