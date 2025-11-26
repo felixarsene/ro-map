@@ -1,0 +1,87 @@
+.history-page-bg {
+  position: relative;
+  min-height: calc(100vh - 70px);
+  background: #faf3e3;
+  padding: 40px 0 60px;
+  overflow: hidden;
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(10px);
+  opacity: 0.35;
+  z-index: 0;
+}
+.bubble-yellow {
+  width: 220px;
+  height: 220px;
+  background: #ffe8a3;
+  top: 90px;
+  left: -70px;
+}
+.bubble-blue {
+  width: 230px;
+  height: 230px;
+  background: #c7d7ff;
+  top: 280px;
+  right: -80px;
+}
+.bubble-red {
+  width: 190px;
+  height: 190px;
+  background: #ffc5c5;
+  bottom: -50px;
+  left: 45%;
+}
+
+.history-content {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.history-card {
+  background: #fff;
+  border-radius: 22px;
+  padding: 32px 36px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
+}
+
+.history-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #002b7f;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+}
+
+.history-period {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #222;
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+
+.history-list {
+  margin: 0 0 8px 0;
+  padding-left: 1.2em;
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.history-list li {
+  margin-bottom: 6px;
+}
+
+@media (max-width: 700px) {
+  .history-card {
+    padding: 18px 10px;
+  }
+  .history-content {
+    padding: 0 8px;
+  }
+}
