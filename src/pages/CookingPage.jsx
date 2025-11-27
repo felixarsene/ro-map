@@ -6,7 +6,6 @@ import '../styles/CookingPage.css';
 
 // --- RECIPE DATA ---
 const recipes = [
-
  {
   name: "Cozonac Tradițional",
   // Placeholder image link for Cozonac
