@@ -26,6 +26,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/profile" element={<ProfilePage/>} />
         <Route path="/religion" element={<ReligionPage />} />
         <Route path="/history" element={<HistoryPage /> } />
+        <Route path="/cooking" element={<CookingPage />} />
       </Routes>
     </Router>
   </StrictMode>

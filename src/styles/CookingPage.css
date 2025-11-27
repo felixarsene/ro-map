@@ -1,3 +1,4 @@
+/* --- PAGE BACKGROUND (Uses Bubble System) --- */
 
 .more-page-bg { /* Renaming/using this class for the background wrapper */
  position: relative;
@@ -6,6 +7,8 @@
  padding: 20px 0 60px; /* Reduced top padding slightly */
  overflow: hidden;
 }
+
+/* --- BUBBLE DEFINITIONS --- */
 
 .bubble {
  position: absolute;
@@ -36,22 +39,27 @@
  left: 45%;
 }
 
+/* --- CENTRAL CONTENT CARD (The White Box) --- */
 
-
-.more-content { /* Renaming/using this class for the content wrapper */
- max-width: 1000px; /* Increased width slightly for recipes */
+.more-content {
+ max-width: 1000px; /* Constrains the width of the card box */
  margin: 0 auto;
  position: relative;
  z-index: 1;
+
+  /* Card Box Styling */
+ background: #fff;
+ border-radius: 22px;
+ padding: 32px 36px;
+ box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
 }
 
 /* --- HERO SECTION --- */
 
 .cooking-hero {
  text-align: center;
- padding: 0 0 70px 0; /* Increase bottom padding to separate from content */
+ padding: 0 0 70px 0; /* Increased bottom space for separation */
  margin-bottom: 0;
-  /* Removed all background/shadow/border from the hero section */
 }
 
 .cooking-hero-title {
@@ -63,10 +71,9 @@
  justify-content: center;
 }
 
-
 .cooking-hero-title span {
  display: inline-block;
- width: 30px; 
+ width: 30px;
 }
 
 .flag-icon {
@@ -125,7 +132,7 @@
  gap: 30px;
 }
 
-/* --- Recipe Card Styling (Kept Clean) --- */
+/* --- Recipe Card Styling --- */
 
 .recipe-item-card {
  display: flex;
@@ -195,9 +202,8 @@
 }
 
 .ingredient-list li {
-  background-color: #f7f7f7;
-  padding: 2px 8px;
-  border-radius: 3px;
+ background-color: #f7f7f7;
+ padding: 2px 8px;
 }
 
 .card-controls {
@@ -215,8 +221,7 @@
  text-align: center;
  font-size: 1.1em;
  border-radius: 50px;
- cursor: pointer;
- transition: background-color 0.3s;
+ cursor: pointer; transition: background-color 0.3s;
 }
 
 .view-recipe-btn:hover {
