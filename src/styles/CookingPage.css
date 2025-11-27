@@ -18,8 +18,11 @@
 
 .cooking-hero-title {
   font-size: 2.5em;
-  color: #002b7f; 
+  color: #002b7f;
   margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .cooking-hero-title span {
@@ -38,14 +41,30 @@
   color: #555;
   max-width: 600px;
   margin: 0 auto;
+  padding: 20px;
 }
 
+/* Page background with soft Romanian vibe */
 
+.more-page-bg {
+  position: relative;
+  min-height: calc(100vh - 70px);
+  background: #ebe3d0; /* warm like your login page */
+  padding: 40px 0 60px;
+  overflow: hidden;
+}
+
+.more-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
 
 /* --- Recipe Card Section Header (Inspired by MorePage) --- */
 
 .recipe-card-section {
-    margin-bottom: 60px;
+  margin-bottom: 60px;
 }
 
 .recipe-card-header {
@@ -57,27 +76,25 @@
 }
 
 .recipe-title {
-    font-size: 1.8em;
-    color: #333;
-    margin: 0 0 5px 0;
+  font-size: 1.8em;
+  color: #333;
+  margin: 0 0 5px 0;
 }
 
 .recipe-subtitle {
-    color: #777;
-    margin: 0;
+  color: #777;
+  margin: 0;
 }
 
 .tag-group .tag {
-    background-color: #f0f0f0;
-    color: #444;
-    padding: 5px 12px;
-    border-radius: 20px;
-    margin-left: 8px;
-    font-size: 0.9em;
-    font-weight: 500;
+  background-color: #f0f0f0;
+  color: #444;
+  padding: 5px 12px;
+  border-radius: 20px;
+  margin-left: 8px;
+  font-size: 0.9em;
+  font-weight: 500;
 }
-
-
 
 /* --- Recipe Grid Layout --- */
 
@@ -86,9 +103,6 @@
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 30px;
 }
-
-
-
 
 /* --- Recipe Card Styling (Inspired by Music Frame) --- */
 
@@ -141,7 +155,7 @@
   font-weight: 700;
   margin-top: 0;
   margin-bottom: 5px;
-  color: #000000; /* Deep red for dish name */
+  color: #000000;
 }
 
 .ingredient-list-preview {
@@ -149,8 +163,7 @@
   color: #666;
   padding-top: 10px;
   margin-bottom: 15px;
-  border-top: 1px solid #eee; /* Horizontal divider like a progress bar */
-
+  border-top: 1px solid #eee;
 }
 
 .ingredient-list {
@@ -162,10 +175,10 @@
 }
 
 .ingredient-list li {
-    background-color: #f7f7f7;
-    padding: 2px 8px;
-    border-radius: 3px
-    font-size: 1.1em;
+  background-color: #f7f7f7;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 1.1em;
 }
 
 .card-controls {
