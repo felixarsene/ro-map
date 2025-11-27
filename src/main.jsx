@@ -9,6 +9,7 @@ import MorePage from './pages/MorePage.jsx';
 import ProfilePage from './pages/ProfilePage.jsx';
 import ReligionPage from './pages/ReligionPage.jsx';
 import HistoryPage from './pages/HistoryPage.jsx';
+import CookingPage from './pages/CookingPage.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -20,6 +21,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/profile" element={<ProfilePage/>} />
         <Route path="/religion" element={<ReligionPage />} />
         <Route path="/history" element={<HistoryPage /> } />
+        <Route path="/cooking" element={<CookingPage /> } />
       </Routes>
     </Router>
   </StrictMode>
