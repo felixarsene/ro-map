@@ -26,7 +26,11 @@ const recipes = [
   name: "Mici (Grilled Ground Meat Rolls)",
   // Placeholder image link for Mici
   image: "https://substackcdn.com/image/fetch/$s_!blNs!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe1917531-6542-4ec7-85f8-fac2fbffabdf_1100x1280.jpeg",
+<<<<<<< Updated upstream
   ingredients: ["Carne de vită/oaie (Beef/Mutton)", "Bicarbonat (Baking Soda)", "Usturoi (Garlic)"],
+=======
+  ingredients: ["Carne de vită/oaie (Beef/Sheep)", "Bicarbonat (Baking Soda)", "Usturoi (Garlic)"],
+>>>>>>> Stashed changes
   link: "https://jamilacuisine.ro/mici-de-casa-pasta-pentru-mici-suculenti-si-deliciosi-reteta-video/",
   category: "Romanian"
  },
@@ -51,7 +55,11 @@ const RecipeCard = ({ recipe }) => {
   <a href={recipe.link} target="_blank" rel="noopener noreferrer" className="recipe-item-card">
    <div className="card-image-container">
     {/* The recipe image */}
+<<<<<<< Updated upstream
    <img 
+=======
+    <img 
+>>>>>>> Stashed changes
      src={recipe.image} 
      alt={recipe.name} 
      className="recipe-image" 
@@ -90,6 +98,7 @@ const CookingPage = () => {
    {/* Assuming you want the same header as your other pages */}
    <Header /> 
    
+<<<<<<< Updated upstream
    {/* START OF CORRECTED STRUCTURE: Using more-page-bg for the bubble effect  */}
    <div className="more-page-bg">
     {/* BUBBLES FOR BACKGROUND EFFECT */}
@@ -97,13 +106,21 @@ const CookingPage = () => {
     <div className="bubble bubble-blue" style={{ top: '30%', left: '70%' }}></div>
     <div className="bubble bubble-red" style={{ top: '60%', left: '40%' }}></div>
     
+=======
+   {/* ⬇️ START OF CHANGES: Applying the bubble background structure ⬇️ */}
+   <div className="more-page-bg"> 
+>>>>>>> Stashed changes
     <div className="more-content"> 
    
      {/* Hero Section for Intro - Inspired by MorePage */}
      <section className="cooking-hero">
        <h1 className="cooking-hero-title">
          Culinary Heritage of Romania <span></span>
+<<<<<<< Updated upstream
          <img src="/romania-flag.svg" className="flag-icon" alt="Romania Flag" />
+=======
+        <img src="/romania-flag.svg" className="flag-icon" alt="Romania Flag" />
+>>>>>>> Stashed changes
        </h1>
        <p className="cooking-hero-subtitle">
          Discover traditional recipes, handed down through generations, 
@@ -118,7 +135,11 @@ const CookingPage = () => {
       <header className="recipe-card-header">
        <div>
         <h2 className="recipe-title">Essential Romanian Cuisine</h2>
+<<<<<<< Updated upstream
         <p className="recipe-subtitle">All recipes link to step-by-step video instructions.</p>
+=======
+       <p className="recipe-subtitle">All recipes link to step-by-step video instructions.</p>
+>>>>>>> Stashed changes
        </div>
        
        {/* Tag Group for Category */}
@@ -128,9 +149,14 @@ const CookingPage = () => {
          <span className="tag">Main Course</span>
        </div>
       </header>
+<<<<<<< Updated upstream
 
       {/* List Container: The grid of your recipe cards */}
      <div className="recipe-grid">
+=======
+      {/* List Container: The grid of your recipe cards */}
+      <div className="recipe-grid">
+>>>>>>> Stashed changes
        {recipes.map((recipe, index) => (
         <RecipeCard key={index} recipe={recipe} />
        ))}

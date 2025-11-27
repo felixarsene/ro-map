@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 /* --- PAGE BACKGROUND (Uses Bubble System) --- */
 
 .more-page-bg { /* Renaming/using this class for the background wrapper */
@@ -62,6 +63,53 @@
  margin-bottom: 0;
 }
 
+=======
+/* --- Page Layout --- */
+
+.cooking-page-layout {
+ padding: 20px;
+ max-width: 1200px;
+ margin: 0 auto;
+}
+
+
+
+
+/* Page background with soft Romanian vibe */
+
+.more-page-bg {
+ position: relative;
+ min-height: calc(100vh - 70px);
+ background: #ebe3d0; /* warm like your login page */
+ padding: 40px 0 60px;
+ padding: 40px 0 60px;
+ overflow: hidden;
+}
+
+.more-content {
+ max-width: 1100px;
+ margin: 0 auto;
+ position: relative;
+ z-index: 1;
+}
+
+
+
+/* --- Hero Section --- */
+.cooking-hero {
+ text-align: center;
+ padding: 40px 20px;
+ /* --- START OF CHANGES: REMOVING THE BOX BACKGROUND --- */
+ /* background: #fdfaf2cf; /* Light, warm background */
+ /* border-radius: 12px; */
+ margin-bottom: 40px;
+ /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); */
+ /* --- END OF CHANGES --- */
+}
+
+
+
+>>>>>>> Stashed changes
 .cooking-hero-title {
  font-size: 2.5em;
  color: #002b7f;
@@ -71,17 +119,33 @@
  justify-content: center;
 }
 
+<<<<<<< Updated upstream
 .cooking-hero-title span {
  display: inline-block;
  width: 30px;
 }
 
+=======
+
+.cooking-hero-title span {
+ display: inline-block;
+ width: 30px; /* Space for the flag */
+}
+
+
+
+>>>>>>> Stashed changes
 .flag-icon {
  width: 30px;
  height: 20px;
  margin-left: 10px;
 }
 
+<<<<<<< Updated upstream
+=======
+
+
+>>>>>>> Stashed changes
 .cooking-hero-subtitle {
  font-size: 1.1em;
  color: #555;
@@ -89,12 +153,25 @@
  margin: 0 auto;
 }
 
+<<<<<<< Updated upstream
 /* --- RECIPE CARD SECTION (Below Hero) --- */
+=======
+
+
+
+/* --- Recipe Card Section Header (Inspired by MorePage) --- */
+
+>>>>>>> Stashed changes
 
 .recipe-card-section {
   margin-bottom: 60px;
 }
 
+<<<<<<< Updated upstream
+=======
+
+
+>>>>>>> Stashed changes
 .recipe-card-header {
  display: flex;
  justify-content: space-between;
@@ -103,17 +180,32 @@
  padding: 0 10px;
 }
 
+<<<<<<< Updated upstream
+=======
+
+
+>>>>>>> Stashed changes
 .recipe-title {
   font-size: 1.8em;
   color: #333;
   margin: 0 0 5px 0;
 }
 
+<<<<<<< Updated upstream
+=======
+
+
+>>>>>>> Stashed changes
 .recipe-subtitle {
   color: #777;
   margin: 0;
 }
 
+<<<<<<< Updated upstream
+=======
+
+
+>>>>>>> Stashed changes
 .tag-group .tag {
   background-color: #f0f0f0;
   color: #444;
@@ -124,6 +216,12 @@
   font-weight: 500;
 }
 
+<<<<<<< Updated upstream
+=======
+
+
+
+>>>>>>> Stashed changes
 /* --- Recipe Grid Layout --- */
 
 .recipe-grid {
@@ -132,12 +230,26 @@
  gap: 30px;
 }
 
+<<<<<<< Updated upstream
 /* --- Recipe Card Styling --- */
+=======
+
+
+
+
+
+/* --- Recipe Card Styling (Inspired by Music Frame) --- */
+
+>>>>>>> Stashed changes
 
 .recipe-item-card {
  display: flex;
  flex-direction: column;
+<<<<<<< Updated upstream
  border: 10px solid #f9f9f9; 
+=======
+ border: 10px solid #f9f9f9; /* Outer frame border */
+>>>>>>> Stashed changes
  border-radius: 6px;
  background-color: white;
  text-decoration: none;
@@ -148,17 +260,34 @@
  height: 100%;
 }
 
+<<<<<<< Updated upstream
+=======
+
+
+>>>>>>> Stashed changes
 .recipe-item-card:hover {
  transform: translateY(-3px);
  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
+<<<<<<< Updated upstream
 .card-image-container {
+=======
+
+
+.card-image-container {
+ /* Creates a square image aspect ratio, like a framed picture */
+>>>>>>> Stashed changes
  width: 100%;
  padding-top: 100%;
  position: relative;
 }
 
+<<<<<<< Updated upstream
+=======
+
+
+>>>>>>> Stashed changes
 .recipe-image {
  position: absolute;
  top: 0;
@@ -166,9 +295,17 @@
  width: 100%;
  height: 100%;
  object-fit: cover;
+<<<<<<< Updated upstream
  border: 1px solid #eee;
 }
 
+=======
+ border: 1px solid #eee; /* Inner image border */
+}
+
+
+
+>>>>>>> Stashed changes
 .card-details {
  padding: 15px 20px;
  text-align: left;
@@ -177,22 +314,43 @@
  flex-grow: 1;
 }
 
+<<<<<<< Updated upstream
+=======
+
+
+>>>>>>> Stashed changes
 .dish-name {
  font-size: 1.6em;
  font-weight: 700;
  margin-top: 0;
  margin-bottom: 5px;
+<<<<<<< Updated upstream
  color: #000000;
 }
 
+=======
+ color: #000000; /* Deep red for dish name */
+}
+
+
+
+>>>>>>> Stashed changes
 .ingredient-list-preview {
  font-size: 0.9em;
  color: #666;
  padding-top: 10px;
  margin-bottom: 15px;
+<<<<<<< Updated upstream
  border-top: 1px solid #eee;
 }
 
+=======
+ border-top: 1px solid #eee; /* Horizontal divider like a progress bar */
+}
+
+
+
+>>>>>>> Stashed changes
 .ingredient-list {
  list-style: none;
  padding: 0;
@@ -201,11 +359,23 @@
  gap: 5px 10px;
 }
 
+<<<<<<< Updated upstream
 .ingredient-list li {
  background-color: #f7f7f7;
  padding: 2px 8px;
 }
 
+=======
+
+
+.ingredient-list li {
+  background-color: #f7f7f7;
+  padding: 2px 8px;
+  border-radius: 3px;
+}
+
+
+>>>>>>> Stashed changes
 .card-controls {
  text-align: center;
  padding-top: 15px;
@@ -213,6 +383,11 @@
  margin-top: auto;
 }
 
+<<<<<<< Updated upstream
+=======
+
+
+>>>>>>> Stashed changes
 .view-recipe-btn {
  background-color: #950303;
  color: white;
@@ -220,6 +395,7 @@
  padding: 10px 25px;
  text-align: center;
  font-size: 1.1em;
+<<<<<<< Updated upstream
  border-radius: 50px;
  cursor: pointer; transition: background-color 0.3s;
 }
@@ -234,4 +410,15 @@
  .more-content {
   padding: 18px 10px;
  }
+=======
+ border-radius: 50px; /* Pill shape for the button */
+ cursor: pointer;
+ transition: background-color 0.3s;
+}
+
+
+
+.view-recipe-btn:hover {
+ background-color: #cc1717;
+>>>>>>> Stashed changes
 }

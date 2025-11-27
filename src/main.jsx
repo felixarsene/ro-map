@@ -23,10 +23,13 @@ createRoot(document.getElementById('root')).render(
         <Route path="/religion" element={<ReligionPage />} />
         <Route path="/history" element={<HistoryPage /> } />
         <Route path="/cooking" element={<CookingPage />} />
+<<<<<<< Updated upstream
         <Route path="/profile" element={<ProfilePage/>} />
         <Route path="/religion" element={<ReligionPage />} />
         <Route path="/history" element={<HistoryPage /> } />
         <Route path="/cooking" element={<CookingPage />} />
+=======
+>>>>>>> Stashed changes
       </Routes>
     </Router>
   </StrictMode>
