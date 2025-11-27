@@ -4,7 +4,7 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css';
 import HomePage from './pages/HomePage.jsx';
-import AuthPage from './pages/AuthPage.jsx'; // make sure this path is correct
+import AuthPage from './pages/AuthPage.jsx';
 import MorePage from './pages/MorePage.jsx';
 import ProfilePage from './pages/ProfilePage.jsx';
 import ReligionPage from './pages/ReligionPage.jsx';
@@ -23,6 +23,9 @@ createRoot(document.getElementById('root')).render(
         <Route path="/religion" element={<ReligionPage />} />
         <Route path="/history" element={<HistoryPage /> } />
         <Route path="/cooking" element={<CookingPage />} />
+        <Route path="/profile" element={<ProfilePage/>} />
+        <Route path="/religion" element={<ReligionPage />} />
+        <Route path="/history" element={<HistoryPage /> } />
       </Routes>
     </Router>
   </StrictMode>

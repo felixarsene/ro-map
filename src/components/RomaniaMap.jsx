@@ -1,68 +1,72 @@
 import { useState } from "react";
-import RegionsSVG from "../assets/Romania_historic_regions.svg?react";
-import CountiesSVG from "../assets/Romania_counties.svg?react";
-import "./../RomaniaMap.css";
+import RegionsSVG from "../assets/Romania_historic_regions1.svg?react";
+import "../styles/RomaniaMap.css";
+import regionInfo from "../data/regions.js";
+import Tooltip from "./Tooltip.jsx";
+import CountiesMap from "./CountiesMap.jsx";
 
 export default function RomaniaMap() {
-    const [hoveredRegion, setHoveredRegion] = useState(null);
-    const [selectedRegion, setSelectedRegion] = useState(null);
-    const [tooltip, setTooltip] = useState({ visible: false, x: 0, y: 0 });
+  const [hoveredRegion, setHoveredRegion] = useState(null);
+  const [selectedRegion, setSelectedRegion] = useState(null);
+  const [showCounties, setShowCounties] = useState(false);
+  const [tooltip, setTooltip] = useState({ visible: false, x: 0, y: 0 });
 
-    const handleMouseMove = (e) => {
-        setTooltip({
-            visible: true,
-            x: e.clientX + 10,
-            y: e.clientY + 10,
-        });
-    };
+  const handleRegionClick = (regionId) => {
+    setHoveredRegion(null);
+    setTooltip({ visible: false });
+    setSelectedRegion(regionId);
+    setTimeout(() => setShowCounties(true), 400);
+  };
 
-    const handleMouseLeave = () => {
-        setTooltip({ visible: false });
-    };
+  const handleBack = () => {
+    setShowCounties(false);
+    setTimeout(() => setSelectedRegion(null), 400);
+  };
 
-    const handleRegionClick = (regionId) => {
-        setSelectedRegion(regionId);
-    };
-
-    return (
-        <div style={{ position: "relative" }}>
-            {!selectedRegion ? (
-                <RegionsSVG
-                    className="romania-map"
-                    onMouseMove={handleMouseMove}
-                    onMouseOver={(e) => {
-                        if (e.target.tagName === "path" && e.target.id) {
-                            setHoveredRegion(e.target.id);
-                        }
-                    }}
-                    onMouseOut={(e) => {
-                        if (e.target.tagName === "path") {
-                            setHoveredRegion(null);
-                        }
-                    }}
-                />
-            ) : (
-                <CountiesSVG className="county-map" />
-            )}
-
-            {/* Tooltip */}
-            {tooltip.visible && hoveredRegion && (
-                <div
-                    style={{
-                        position: "fixed",
-                        top: tooltip.y,
-                        left: tooltip.x,
-                        padding: "6px 10px",
-                        background: "#222",
-                        color: "white",
-                        borderRadius: "6px",
-                        pointerEvents: "none",
-                        fontSize: "12px",
-                    }}
-                >
-                    {hoveredRegion}
-                </div>
-            )}
+  return (
+    <div className="romania-map-container">
+      <div className={`map-fade${showCounties ? " map-fade-hidden" : ""}`}>
+        <RegionsSVG
+          className={`romania-map ${hoveredRegion ? "hovering" : ""}`}
+          onClick={(e) => {
+            if (e.target.tagName === "path" && e.target.id) {
+              handleRegionClick(e.target.id);
+            }
+          }}
+          onMouseMove={(e) => {
+            setTooltip({
+              visible: true,
+              x: e.clientX + 10,
+              y: e.clientY + 10,
+            });
+          }}
+          onMouseOver={(e) => {
+            if (e.target.tagName === "path" && e.target.id) {
+              setHoveredRegion(e.target.id);
+            }
+          }}
+          onMouseOut={(e) => {
+            if (e.target.tagName === "path") {
+              setHoveredRegion(null);
+            }
+          }}
+        />
+        {tooltip.visible && hoveredRegion && (
+          <Tooltip x={tooltip.x} y={tooltip.y}>
+            <strong>{regionInfo[hoveredRegion].name}</strong>
+            <br />
+            {regionInfo[hoveredRegion].description}
+          </Tooltip>
+        )}
+      </div>
+      {selectedRegion && (
+        <div className={`map-fade${showCounties ? "" : " map-fade-hidden"}`}>
+          <CountiesMap
+            region={selectedRegion}
+            onBack={handleBack}
+          />
         </div>
-    );
+      )}
+    </div>
+  );
 }
