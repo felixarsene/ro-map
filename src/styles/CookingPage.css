@@ -1,78 +1,99 @@
-/* --- Page Layout --- */
 
-.cooking-page-layout {
-  padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+.more-page-bg { /* Renaming/using this class for the background wrapper */
+ position: relative;
+ min-height: calc(100vh - 70px);
+ background: #faf3e3; /* Soft background color for the page */
+ padding: 20px 0 60px; /* Reduced top padding slightly */
+ overflow: hidden;
 }
 
-/* --- Hero Section --- */
+.bubble {
+ position: absolute;
+ border-radius: 999px;
+ filter: blur(10px);
+ opacity: 0.35;
+ z-index: 0;
+}
+.bubble-yellow {
+ width: 220px;
+ height: 220px;
+ background: #ffe8a3;
+ top: 90px;
+ left: -70px;
+}
+.bubble-blue {
+ width: 230px;
+ height: 230px;
+ background: #c7d7ff;
+ top: 280px;
+ right: -80px;
+}
+.bubble-red {
+ width: 190px;
+ height: 190px;
+ background: #ffc5c5;
+ bottom: -50px;
+ left: 45%;
+}
+
+
+
+.more-content { /* Renaming/using this class for the content wrapper */
+ max-width: 1000px; /* Increased width slightly for recipes */
+ margin: 0 auto;
+ position: relative;
+ z-index: 1;
+}
+
+/* --- HERO SECTION --- */
+
 .cooking-hero {
-  text-align: center;
-  padding: 40px 20px;
-  background: #fdfaf2; /* Light, warm background */
-  border-radius: 12px;
-  margin-bottom: 40px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+ text-align: center;
+ padding: 0 0 70px 0; /* Increase bottom padding to separate from content */
+ margin-bottom: 0;
+  /* Removed all background/shadow/border from the hero section */
 }
 
 .cooking-hero-title {
-  font-size: 2.5em;
-  color: #002b7f;
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+ font-size: 2.5em;
+ color: #002b7f;
+ margin-bottom: 10px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
 }
 
+
 .cooking-hero-title span {
-  display: inline-block;
-  width: 30px; /* Space for the flag */
+ display: inline-block;
+ width: 30px; 
 }
 
 .flag-icon {
-  width: 30px;
-  height: 20px;
-  margin-left: 10px;
+ width: 30px;
+ height: 20px;
+ margin-left: 10px;
 }
 
 .cooking-hero-subtitle {
-  font-size: 1.1em;
-  color: #555;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
+ font-size: 1.1em;
+ color: #555;
+ max-width: 600px;
+ margin: 0 auto;
 }
 
-/* Page background with soft Romanian vibe */
-
-.more-page-bg {
-  position: relative;
-  min-height: calc(100vh - 70px);
-  background: #ebe3d0; /* warm like your login page */
-  padding: 40px 0 60px;
-  overflow: hidden;
-}
-
-.more-content {
-  max-width: 1100px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
-}
-
-/* --- Recipe Card Section Header (Inspired by MorePage) --- */
+/* --- RECIPE CARD SECTION (Below Hero) --- */
 
 .recipe-card-section {
   margin-bottom: 60px;
 }
 
 .recipe-card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 30px;
-  padding: 0 10px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin-bottom: 30px;
+ padding: 0 10px;
 }
 
 .recipe-title {
@@ -99,107 +120,113 @@
 /* --- Recipe Grid Layout --- */
 
 .recipe-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+ gap: 30px;
 }
 
-/* --- Recipe Card Styling (Inspired by Music Frame) --- */
+/* --- Recipe Card Styling (Kept Clean) --- */
 
 .recipe-item-card {
-  display: flex;
-  flex-direction: column;
-  border: 10px solid #f9f9f9; /* Outer frame border */
-  border-radius: 6px;
-  background-color: white;
-  text-decoration: none;
-  color: #333;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-  height: 100%;
+ display: flex;
+ flex-direction: column;
+ border: 10px solid #f9f9f9; 
+ border-radius: 6px;
+ background-color: white;
+ text-decoration: none;
+ color: #333;
+ box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+ overflow: hidden;
+ transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+ height: 100%;
 }
 
 .recipe-item-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+ transform: translateY(-3px);
+ box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .card-image-container {
-  /* Creates a square image aspect ratio, like a framed picture */
-  width: 100%;
-  padding-top: 100%;
-  position: relative;
+ width: 100%;
+ padding-top: 100%;
+ position: relative;
 }
 
 .recipe-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border: 1px solid #eee; /* Inner image border */
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ border: 1px solid #eee;
 }
 
 .card-details {
-  padding: 15px 20px;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
+ padding: 15px 20px;
+ text-align: left;
+ display: flex;
+ flex-direction: column;
+ flex-grow: 1;
 }
 
 .dish-name {
-  font-size: 1.6em;
-  font-weight: 700;
-  margin-top: 0;
-  margin-bottom: 5px;
-  color: #000000;
+ font-size: 1.6em;
+ font-weight: 700;
+ margin-top: 0;
+ margin-bottom: 5px;
+ color: #000000;
 }
 
 .ingredient-list-preview {
-  font-size: 0.9em;
-  color: #666;
-  padding-top: 10px;
-  margin-bottom: 15px;
-  border-top: 1px solid #eee;
+ font-size: 0.9em;
+ color: #666;
+ padding-top: 10px;
+ margin-bottom: 15px;
+ border-top: 1px solid #eee;
 }
 
 .ingredient-list {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px 10px;
+ list-style: none;
+ padding: 0;
+ display: flex;
+ flex-wrap: wrap;
+ gap: 5px 10px;
 }
 
 .ingredient-list li {
   background-color: #f7f7f7;
   padding: 2px 8px;
   border-radius: 3px;
-  font-size: 1.1em;
 }
 
 .card-controls {
-  text-align: center;
-  padding-top: 15px;
-  border-top: 1px solid #eee;
-  margin-top: auto;
+ text-align: center;
+ padding-top: 15px;
+ border-top: 1px solid #eee;
+ margin-top: auto;
 }
 
 .view-recipe-btn {
-  background-color: #950303;
-  color: white;
-  border: none;
-  padding: 10px 25px;
-  text-align: center;
-  font-size: 1.1em;
-  border-radius: 50px; /* Pill shape for the button */
-  cursor: pointer;
-  transition: background-color 0.3s;
+ background-color: #950303;
+ color: white;
+ border: none;
+ padding: 10px 25px;
+ text-align: center;
+ font-size: 1.1em;
+ border-radius: 50px;
+ cursor: pointer;
+ transition: background-color 0.3s;
 }
 
 .view-recipe-btn:hover {
-  background-color: #cc1717;
+ background-color: #cc1717;
+}
+
+/* --- MEDIA QUERIES --- */
+
+@media (max-width: 700px) {
+ .more-content {
+  padding: 18px 10px;
+ }
 }
